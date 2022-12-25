@@ -4,7 +4,7 @@ public-url: "/"
 theme_color: '#58a6ff'
 url: 'URL is needed for robots.txt to work properly' ## NO TRAILING SLASHES!!/<--nope
 port: 3000
-gh_pages_url_path: /project-boilerplate/
+gh_pages_url_path: /markdown-parser/
 timezone: America/Chicago
 google-tag_key: Google Tag Manager key goes here
 # collections:

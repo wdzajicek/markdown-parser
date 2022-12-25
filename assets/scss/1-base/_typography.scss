@@ -1,0 +1,22 @@
+
+.typography__optional {
+  background-color: rgba(20, 139, 169, .35);
+  border-radius: .9em;
+  border: solid 1px rgba(255,255,255,.25);
+  font-size: .9em;
+  font-weight: 300;
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+.typography--nowrap {
+  white-space: nowrap;
+}
+
+.typography__param-name {
+  padding-inline-start: 2rem;
+}
+
+.typography__param-desc {
+  padding-inline-start: 3.5rem;
+}

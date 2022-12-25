@@ -1,0 +1,75 @@
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: $color-blue-white-light;
+    background-color: $color-body-bg;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: $white;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar-toggler {
+    border-color: rgba(255, 255,255, .325)
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28249, 249, 249, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar-brand {
+    color: $color-blue-white-light;
+  }
+  .navbar-brand:hover,
+  .navbar-brand:focus {
+    color: $grey-7;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .nav-link {
+    color: $color-blue-white-light;
+  }
+  .nav-link:hover,
+  .nav-link:focus {
+    color: $grey-5;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .dropdown-menu {
+    background-color: $color-gray-dark;
+    border-color: rgba(255, 255,255, .5);
+    border-style: solid;
+    border-width: 1px;
+  }
+  .dropdown-item {
+    color: $color-blue-white-light;
+  }
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    color: $grey-7;
+  }
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background-color: $color-gray-darker;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .border-bottom,
+  .border-top,
+  .border-start,
+  .border-end,
+  .border {
+    border-color: rgba(255, 255,255, .25) !important;
+  }
+  .dropdown-divider {
+    border-color: rgba(255, 255,255, .5) !important;
+  }
+}

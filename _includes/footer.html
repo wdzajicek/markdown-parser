@@ -1,0 +1,14 @@
+<footer class="mt-5 border-top border-3">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col px-5">
+        <h5>
+          <a href="{% if jekyll.environment == 'ghPages' %}{{ site.gh_pages_url_path }}{% else %}/{% endif %}">
+            Project Boilerplate
+          </a>
+        </h5>
+        <p>&copy; <span id="footerYear">{{ 'now' | date: '%Y' }}</span> Wesley Zajicek</p>
+      </div>
+    </div>
+  </div>
+</footer>

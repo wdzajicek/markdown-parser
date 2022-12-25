@@ -1,0 +1,6 @@
+@media (prefers-color-scheme: dark) {
+  .table,
+  .table-striped>tbody>tr:nth-of-type(odd)>* {
+    color: $color-blue-white-light;
+  }
+}

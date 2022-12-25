@@ -1,0 +1,38 @@
+.svg {
+  max-width: 100%;
+  height: auto;
+  &--overflow-visible {
+    overflow: visible;
+  }
+}
+
+.svg--font-color {
+  fill:#555;
+}
+
+@media (prefers-color-scheme: dark) {
+  .svg--font-color {
+    fill: #dde0e3;
+  }
+}
+
+@keyframes rotate-down {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+#four {
+  transform-origin: 209.9px 111.2px;
+}
+
+.svg--animate {
+  animation-fill-mode: forwards;
+  animation-delay: 1.25s;
+  animation-name: rotate-down;
+  animation-duration: .45s;
+  animation-timing-function: ease-in;
+}

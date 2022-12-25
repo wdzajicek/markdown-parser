@@ -1,0 +1,12 @@
+
+.blockquote--border {
+  border-left-color: $color-cyan-tint;
+  border-left-style: solid;
+  border-left-width: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .blockquote--border {
+    border-left-color: $color-cyan-dark;
+  }
+}

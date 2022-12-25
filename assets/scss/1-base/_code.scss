@@ -1,0 +1,102 @@
+.code {
+  font-size: 1rem;
+  color: $color-code-default;
+  word-wrap: break-word;
+}
+
+code.highlighter-rouge {
+  background-color: rgba(0,0,0,.5);
+  padding-left: .375rem;
+  padding-right: .375rem;
+  border-radius: .25rem;
+}
+
+.code--bg {
+  background-color: #000;
+  border-radius: 5px;
+  margin-bottom: 2px;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.highlighter-rouge:not(code) {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  background-color: #000;
+  padding: 1rem;
+}
+
+pre {
+  margin-bottom: 0;
+}
+
+.code--wrong {
+  border-color: #f00;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.code--wrong .highlight {
+  background-color: #220d0d;
+}
+
+.code--wrong .highlight:not(pre)::before {
+  content: 'Do NOT do this \2014  It\0027s an example of how NOT to code!';
+  color: #f00;
+  display: block;
+  font-family: $font-family-headings;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: .075rem;
+  text-align: center;
+}
+
+.c1 {
+  color: $color-code-white;
+}
+
+span.p {
+  color: $color-code-orange;
+}
+
+.mi {
+  color: $color-code-blue;
+}
+
+.k {
+  color: $color-code-blue;
+}
+
+.na {
+  color: $color-code-red;
+}
+
+.kc {
+  color: $color-code-orange;
+}
+
+.kd {
+  color: $color-magenta-light;
+}
+.nx {
+  color: $color-yellow-light;
+}
+.nb {
+  color: $color-green-light;
+}
+.dl,
+.s1 {
+  color: $color-green-light;
+}
+
+.se {
+  color: $color-code-red;
+}
+
+.sr {
+  color: $color-code-blue;
+}

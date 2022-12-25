@@ -1,0 +1,44 @@
+.callout {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  background-color: var(--callout-bg, var(--bs-gray-100));
+  border-left: 1rem solid var(--callout-border, var(--bs-gray-300))
+}
+
+@media (prefers-color-scheme: dark) {
+  .callout {
+    background-color: var(--callout-bg, var(--bs-gray-700));
+  }
+}
+
+.callout h4 {
+  margin-bottom: .25rem
+}
+
+.callout>:last-child {
+  margin-bottom: 0
+}
+
+.callout+.callout {
+  margin-top: -.25rem
+}
+
+.callout .highlight {
+  background-color: rgba(0,0,0,0.05)
+}
+
+.callout-info {
+  --callout-bg: rgba(var(--bs-info-rgb), .075);
+  --callout-border: rgba(var(--bs-info-rgb), .5)
+}
+
+.callout-warning {
+  --callout-bg: rgba(var(--bs-warning-rgb), .075);
+  --callout-border: rgba(var(--bs-warning-rgb), .5)
+}
+
+.callout-danger {
+  --callout-bg: rgba(var(--bs-danger-rgb), .2);
+  --callout-border: rgba(var(--bs-danger-rgb), .75)
+}

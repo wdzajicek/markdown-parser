@@ -20,6 +20,8 @@ $font-weight-black: 900;
 
 //Image path for most of global style sheet
 $imagedir:'/assets/img/';
+$border-radius: .75rem;
+
 
 // Colors
 //KCC colors
@@ -48,6 +50,9 @@ $grey-7: #868686;
 $grey-8: #d9d9d9;
 
 $white: #fff;
+$color-white: $white;
+$color-black: $black;
+
 $color-black-125: rgba(0,0,0,.125);
 $color-white-5: rgba(255,255,255,.5);
 

@@ -40,8 +40,8 @@ const embolden = str => str.replace(
 );
 
 const emphasize = str => str.replace(
-  /[*_]([^*_]+)[*_]/g,
-  `<em>$1</em>`
+  /_([^_\n]+)_|\*([^\*\n]+)\*/gm,
+  `<em>$1$2</em>`
 );
 
 const linkReplacer = (match, p1, p2) => p2.search(/^https?:\/\//) !== -1 ?
@@ -79,9 +79,29 @@ const complexLinkify = str => str.replace(
   }
 );
 
+const listUnordered = str => str.replace(
+  /^-\s(.+)$/gm,
+  `<li>$1</li>`
+)
+
+const wrapUnordered = str => str.replace(
+  /(<li>.+<\/li>\n)+/g,
+  `<ul>$&</ul>`
+)
+
+// const listOrdered = str => str.replace(
+//   /^\d\.\s(.+)$/gm,
+//   `<li>$1</li>`
+// )
+
+// const wrapOrdered = str => str.replace(
+//   /(?<!<ul>)(<li>.+<\/li>\n)+(?!<\/ul>)/g,
+//   `<ol>$&</ol>`
+// )
+
 const paragraphize = str => str.replace(
-  /^([^<]*)$/gm,
-  (match, p1) => p1 === '' ? match : `<p>${p1}</p>`
+  /^[^\n<\{].+$/gm,
+  (match) => `<p>${match}</p>`
 );
 
 function parseMarkdown(string, settings) {
@@ -97,6 +117,10 @@ function parseMarkdown(string, settings) {
     embolden,
     emphasize,
     headings,
+    listUnordered,
+    wrapUnordered,
+    // listOrdered,
+    // wrapOrdered,
     paragraphize
   );
 

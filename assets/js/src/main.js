@@ -1,18 +1,9 @@
 import '../../scss/main.scss';
 
-let testMarkdown = `
-# My Wonderful h1
-
-## Some h2!
-
-### 1999FU Tax Form!
-
-#### Something® Yay!
-
-##### You & Me
-
-This *is a* [paragraph](https://google.com) with **some inline** elements.
-`;
+const simpleLinkify = str => str.replace(
+  /<(https?:\/\/[^>]+)>/g,
+  `[$1]($1)`
+);
 
 window.addEventListener('load', () => {
   import('bootstrap/js/src/dropdown')
@@ -33,20 +24,29 @@ window.addEventListener('load', () => {
             let initialRender = false;
 
             if (!initialRender) {
-              let initial = DOMPurify.sanitize(input.value, { USE_PROFILES: { html: true } });
+              let initial = DOMPurify.sanitize(
+                simpleLinkify(input.value),
+                { USE_PROFILES: { html: true } }
+              );
 
               initialRender = true;
               out.innerHTML = parseMarkdown(initial, { auto_ids: true });
             }
+            
 
             input.addEventListener('keyup', () => {
-              let clean = DOMPurify.sanitize(input.value, { USE_PROFILES: { html: true } });
+              let clean = DOMPurify.sanitize(
+                simpleLinkify(input.value),
+                { USE_PROFILES: { html: true } }
+              );
               
               out.innerHTML = parseMarkdown(clean, { auto_ids: true });
             });
-
-            input.focus();
           });
         })
+      if (document.getElementById('lineCount')) {
+        import('./textareaLineCount')
+          .then(({ default: textareaLineCount }) => textareaLineCount());
+      }
     })
 });

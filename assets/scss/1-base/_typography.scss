@@ -20,3 +20,14 @@
 .typography__param-desc {
   padding-inline-start: 3.5rem;
 }
+
+.typography--mono {
+  font-family: $font-family-code;
+}
+
+@media (prefers-color-scheme: dark) {
+  .typography--mono {
+    background-color: $color-black;
+    color: $color-code-default;
+  }
+}

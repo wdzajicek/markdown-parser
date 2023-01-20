@@ -20,6 +20,8 @@ baseurl: ''
      style="min-height: 40vh;">
 # Markdown is Fun!
 
+-----
+
 ![WZ](./assets/img/icon_512.png){: .img-fluid.float-end width="256" height="256" }
 
 ## It's a ___magical___

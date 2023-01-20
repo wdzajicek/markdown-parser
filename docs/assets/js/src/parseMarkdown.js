@@ -104,6 +104,11 @@ const paragraphize = str => str.replace(
   (match) => `<p>${match}</p>`
 );
 
+const rule = str => str.replace(
+  /^-{3,5}$/gm,
+  '<hr>'
+);
+
 function parseMarkdown(string, settings) {
   const config = settings || DEFAULT_CONFIG;
 
@@ -121,6 +126,7 @@ function parseMarkdown(string, settings) {
     wrapUnordered,
     // listOrdered,
     // wrapOrdered,
+    rule,
     paragraphize
   );
 

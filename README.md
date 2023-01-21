@@ -1,13 +1,31 @@
-# Project Boilerplate
+# Markdown Parser
 
-**GitHub Pages:** <https://wdzajicek.github.io/project-boilerplate/>
+**Live demo (GitHub pages):** <https://wdzajicek.github.io/markdown-parser/>
 
-This a starting point for creating new GitHub projects.
+-----
+
+## Overview
+
+An online markdown-to-HTML parser.
+Parses and renders markdown as HTML in a lightweight Bootstrap 5 website.
+
+I'm creating this project because I wanted a lightweight JS markdown parser that supports custom classes, id's, and HTML attributes. Projects like [`marked`](https://github.com/markedjs/marked) are nice, however, it seems to have a lot of extra features and options that I don't want and no custom id's or classes (that I could find):
+
+Example of markdown with custom id's classes and attributes:
+```markdown
+# Heading
+{: #heading-id .class1 }
+
+![image alt text](./path/to/image.png){: height="90" width="160" .class2.class3 }
+
+[My link](https://google.com){: #link-id .class3 }
+```
 
 ## Prerequisites
 
-- `ruby-2.6.3` (for Jekyll v4)
-- [Node Version Manager (NVM)](https://github.com/nvm-sh/nvm)
+- `ruby-2.7.3` (for Jekyll v4)
+- [Node Version Manager (NVM)](https://github.com/nvm-sh/nvm):
+  - Install Node.js using nvm: `nvm install v18.12.1` (check `.nvmrc` file to verify current version.)
   - `bash` function to look for `.nvmrc` files:
     ```
     ## Use a local .nvmrc file if present
@@ -26,11 +44,21 @@ This a starting point for creating new GitHub projects.
 
 ## Installation
 
+Clone the repo and install the NPM & Gem dependencies:
+
 ```bash
-git clone git@github.com:wdzajicek/javascript.git
-cd javascript
+git clone git@github.com:wdzajicek/markdown-parser.git
+cd markdown-parser
 npm i && bundle i
 ```
+
+Dependencies include Jekyll (and its deps) plus (see `package.json` for full list):
+- `DOMPurify` - Sanitize input
+- `webpack`, `babel`, and `corejs`
+- **Bootstrap 5** & `popperjs`
+- `autoprefixer`
+- `sass`
+- `npm-run-all`
 
 ## Development Build
 
@@ -59,6 +87,9 @@ npm run gh-pages
 npm run copy-gh
 ```
 
+View the live markdown-parser on GitHub pages: <https://wdzajicek.github.io/markdown-parser/>
+
 A production GitHub pages build is created using the `gh-pages` npm script.
 
 After a successful build is run it gets copied into the `docs/` directory using the `copy-gh` npm script.
+

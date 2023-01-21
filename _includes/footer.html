@@ -4,7 +4,7 @@
       <div class="col px-5">
         <h5>
           <a href="{% if jekyll.environment == 'ghPages' %}{{ site.gh_pages_url_path }}{% else %}/{% endif %}">
-            Project Boilerplate
+            {{ site.title }}
           </a>
         </h5>
         <p>&copy; <span id="footerYear">{{ 'now' | date: '%Y' }}</span> Wesley Zajicek</p>

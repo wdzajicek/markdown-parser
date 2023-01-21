@@ -1,5 +1,5 @@
-title: "Project Boilerplate"
-site_name: Project Boilerplate
+title: "Markdown Parser"
+site_name: Markdown Parser
 public-url: "/"
 theme_color: '#58a6ff'
 url: 'URL is needed for robots.txt to work properly' ## NO TRAILING SLASHES!!/<--nope

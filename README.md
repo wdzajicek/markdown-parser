@@ -21,6 +21,8 @@ Example of markdown with custom id's classes and attributes:
 [My link](https://google.com){: #link-id .class3 }
 ```
 
+![Screenshot of the online markdown parser](./assets/img/screencapture.jpg)
+
 ## Prerequisites
 
 - `ruby-2.7.3` (for Jekyll v4)
